@@ -15,7 +15,7 @@ filmRouter.post('/:id', function(req, res) {
   film = films[req.params.id];
   film.addReview(req.body);
   res.json(films);
-})
+});
 
 filmRouter.put('/:id', function(req, res) {
   films[req.params.id] = req.body;
@@ -32,6 +32,7 @@ filmRouter.get('/:id', function(req, res) {
 });
 
 filmRouter.get('/', function(req, res) {
+  res.sendFile(__dirname + '/index.html');
   res.json(films);
 });
 
