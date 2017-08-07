@@ -31,7 +31,7 @@ UI.prototype = {
       this.appendText(li, film.title, "Film: ");
       var li1 = document.createElement("li");
       this.appendText(li1, film.genre, "Genre: ");
-      li.appendChild(li1)
+      li.appendChild(li1);
       
       for(var review of film.reviews){
         this.createReview(li, review);
